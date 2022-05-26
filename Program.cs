@@ -9,8 +9,13 @@ namespace UserRegistration
             Console.WriteLine("\t\t\t\t User Registration using Regular Expression (Regex)");
             RegexValidation regexValidation = new RegexValidation();
             Console.Write("Enter Your First Name : ");
-            string firstName = Console.ReadLine();
-            Console.WriteLine(regexValidation.ValidateFirstName(firstName));
+            string FirstName = Console.ReadLine();
+            Console.WriteLine(regexValidation.ValidateFirstName(FirstName));
+
+            Console.Write("Enter Your Last Name : ");
+            string LastName = Console.ReadLine();
+            Console.WriteLine(regexValidation.ValidateLastName(LastName));
+
         }
     }
 }
