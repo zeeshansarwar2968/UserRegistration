@@ -52,12 +52,12 @@ namespace UserRegistration
         {
             return Regex.IsMatch(email, Regex_Email);
         }
+
         //Method for Phone Number validation
         public bool ValidatePhone(string PhoneNumber)
         {
             return Regex.IsMatch(PhoneNumber, Regex_PhoneNumber);
         }
-
 
         //Method for Password validation
         public bool ValidatePassword(string password)
