@@ -58,6 +58,8 @@ namespace UserRegistration
             return Regex.IsMatch(PhoneNumber, Regex_PhoneNumber);
         }
 
+
+        //Method for Password validation
         public bool ValidatePassword(string password)
         {
             return Regex.IsMatch(password, Regex_Password);

@@ -28,6 +28,33 @@ namespace UserRegistration
             string password = Console.ReadLine();
             Console.WriteLine(regexValidation.ValidatePassword(password));
 
+
+            Console.WriteLine("--------------Sample Email validation----------------");
+            List<string> sampleCheck = new List<string>()
+            {
+                "abc@yahoo.com",
+                "abc-100@yahoo.com",
+                "abc.100@yahoo.com",
+                "abc111@abc.com",
+                "abc-100@abc.net",
+                "abc.100@abc.com.au",
+                "abc@1.com",
+                "abc@gmail.com.com",
+                "abc+100@gmail.com"
+            };
+
+            foreach (var item in sampleCheck)
+            {
+                if (regexValidation.ValidateEmail(item))
+                {
+                    Console.WriteLine("{0} : Valid Email",item);
+                }
+                else
+                {
+                    Console.WriteLine("{0} : Not Valid Email", item);
+                }
+            }
+
         }
     }
 }
