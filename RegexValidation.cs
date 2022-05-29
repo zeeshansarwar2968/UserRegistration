@@ -10,11 +10,16 @@ namespace UserRegistration
 {
     public class RegexValidation
     {   //Regex is a sequence of characters that specifies a search pattern in text
+        //Pattern for First Name validation ---- First name starts with capital and has min 3 characters
         public const string Regex_FirstName = "^[A-Z]{1}[A-Za-z]{2,}$";
+        //Pattern for Last Name validation ---- last name starts with capital and has min 3 characters
         public const string Regex_LastName  = "^[A-Z]{1}[A-Za-z]{2,}$";
+        //Pattern for Email Name validation ---- 3 mandatory parts and 2 optional parts
         public const string Regex_Email = "^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
+        //Pattern for Phone Name validation ---- country code followed by space and 10 digit numbers
+        public const string Regex_PhoneNumber = "^[1-9]{1}[0-9]{0,3}\\s[1-9]{1}[0-9]{9}$";
         //^[a-z0-9](.[a-z])+@[a-z]+\.[a-z]{2,3}$
-        
+
         //Method for first name validation
         public bool ValidateFirstName(string firstName)
         {
@@ -31,6 +36,11 @@ namespace UserRegistration
         public bool ValidateEmail(string email)
         {
             return Regex.IsMatch(email, Regex_Email);
+        }
+        //Method for Phone Number validation
+        public bool ValidateMobile(string PhoneNumber)
+        {
+            return Regex.IsMatch(PhoneNumber, Regex_PhoneNumber);
         }
     }
 }
