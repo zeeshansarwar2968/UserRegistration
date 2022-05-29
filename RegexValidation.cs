@@ -32,7 +32,7 @@ namespace UserRegistration
         //(?=[\\w]*[\\W][\\w]*$) look-ahead for one special character--- \w (word character) matches any single letter, number or underscore
         //\S matches for any non-whitespace character in the set
         
-        //"^(?=.*[A-Z])(?=.*\\d)(?=[\\w]*[\\W][\\w]*$)[\\S]{8,}$";
+        //^(?=.*[A-Z])(?=.*\\d)(?=[\\w]*[\\W][\\w]*$)[\\S]{8,}$;
 
 
         //Method for first name validation
