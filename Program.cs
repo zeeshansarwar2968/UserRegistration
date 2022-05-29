@@ -16,6 +16,10 @@ namespace UserRegistration
             string LastName = Console.ReadLine();
             Console.WriteLine(regexValidation.ValidateLastName(LastName));
 
+            Console.Write("Enter Your Email : ");
+            string email = Console.ReadLine();
+            Console.WriteLine(regexValidation.ValidateEmail(email));
+
         }
     }
 }
