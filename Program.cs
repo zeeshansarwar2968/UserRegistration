@@ -24,7 +24,7 @@ namespace UserRegistration
             string PhoneNumber = Console.ReadLine();
             Console.WriteLine(regexValidation.ValidatePhone(PhoneNumber));
 
-            Console.WriteLine("Enter Your Password");
+            Console.Write("Enter Your Password : ");
             string password = Console.ReadLine();
             Console.WriteLine(regexValidation.ValidatePassword(password));
 
