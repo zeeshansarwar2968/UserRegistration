@@ -22,8 +22,13 @@ namespace UserRegistration
 
         //\S matches for any non-whitespace character in the set
         //Pattern for Password validation ---- min 8 characters
-        public const string Regex_Password = "[\\S]{8,}";
+        public const string Regex_Password = "(?=.*[A-Z])[\\S]{8,}";
 
+        //"Match if the string contains an upper case letter, and a lower case letter,
+        //and a digit, and a non-alphanumeric, and there are at least 8 characters in total."
+        //public const string REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*\\d)(?=[\\w]*[\\W][\\w]*$)[\\S]{8,}$";
+        
+        
         //Method for first name validation
         public bool ValidateFirstName(string firstName)
         {
