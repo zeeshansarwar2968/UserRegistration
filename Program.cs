@@ -22,7 +22,11 @@ namespace UserRegistration
             
             Console.Write("Enter Your Phone Number : ");
             string PhoneNumber = Console.ReadLine();
-            Console.WriteLine(regexValidation.ValidateMobile(PhoneNumber));
+            Console.WriteLine(regexValidation.ValidatePhone(PhoneNumber));
+
+            Console.WriteLine("Enter Your Password");
+            string password = Console.ReadLine();
+            Console.WriteLine(regexValidation.ValidatePassword(password));
 
         }
     }

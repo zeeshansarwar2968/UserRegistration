@@ -20,6 +20,10 @@ namespace UserRegistration
         public const string Regex_PhoneNumber = "^[1-9]{1}[0-9]{0,3}\\s[1-9]{1}[0-9]{9}$";
         //^[a-z0-9](.[a-z])+@[a-z]+\.[a-z]{2,3}$
 
+        //\S matches for any non-whitespace character in the set
+        //Pattern for Password validation ---- min 8 characters
+        public const string Regex_Password = "[\\S]{8,}";
+
         //Method for first name validation
         public bool ValidateFirstName(string firstName)
         {
@@ -38,9 +42,14 @@ namespace UserRegistration
             return Regex.IsMatch(email, Regex_Email);
         }
         //Method for Phone Number validation
-        public bool ValidateMobile(string PhoneNumber)
+        public bool ValidatePhone(string PhoneNumber)
         {
             return Regex.IsMatch(PhoneNumber, Regex_PhoneNumber);
+        }
+
+        public bool ValidatePassword(string password)
+        {
+            return Regex.IsMatch(password, Regex_Password);
         }
     }
 }
